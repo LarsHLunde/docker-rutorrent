@@ -7,5 +7,5 @@ if test -f "$FILE"; then
     echo "Start the docker the normal way and it will start normally"
     exit 0
 fi
-
+nginx
 read  -n 1 -p "Input Selection:" mainmenuinput
