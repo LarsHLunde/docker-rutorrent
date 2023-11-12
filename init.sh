@@ -8,4 +8,4 @@ if test -f "$FILE"; then
     exit 0
 fi
 
-/usr/local/bin/filebrowser -c /config/filebrowser.json
+read  -n 1 -p "Input Selection:" mainmenuinput
