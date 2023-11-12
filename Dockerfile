@@ -1,6 +1,6 @@
 FROM debian:12-slim
 RUN apt-get update
-RUN apt-get install -y curl php nginx php-fpm zip rtorrent
+RUN apt-get install -y curl php nginx php-fpm zip rtorrent php-json
 RUN mkdir /downloads
 RUN mkdir /config
 RUN mkdir /script
