@@ -1,13 +1,12 @@
 FROM debian:12-slim
 RUN apt-get update
-RUN apt-get install -y wget
-RUN wget -q https://raw.githubusercontent.com/filebrowser/get/master/get.sh 
-RUN bash get.sh
-RUN mkdir /storage
+RUN apt-get install -y curl php nginx php-fpm zip
+RUN mkdir /downloads
 RUN mkdir /config
 RUN mkdir /script
-VOLUME ["/storage", "/config"]
-ADD filebrowser.json /script/
+RUN mkdir /install
+VOLUME ["/downloads", "/config"]
+ADD ruTorrent-4.2.8.zip /install/
 ADD init.sh /script/
-EXPOSE 8080/tcp
+EXPOSE 80/tcp
 ENTRYPOINT ["/bin/bash", "/script/init.sh"]
