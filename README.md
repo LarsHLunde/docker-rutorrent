@@ -7,13 +7,13 @@ git clone https://github.com/LarsHLunde/docker-rutorrent.git
 cd docker-rutorrent
 docker build -t rutorrent .
 docker run -t \
-  -v /root/filebrowser-config:/config \
-  -v /storage:/storage \
-  -p 8080:8080 \
-  --name filebrowser \
+  -v /root/rutorrent-config:/config \
+  -v /downloads:/downloads \
+  -p 8080:80 \
+  --name rutorrent \
   --restart unless-stopped \
-  filebrowser
-docker start filebrowser
+  rutorrent
+docker start rutorrent
 ```
 
 ## Nginx passthrough
