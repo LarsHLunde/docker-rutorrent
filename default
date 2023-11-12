@@ -3,7 +3,6 @@ server {
     listen [::]:80 default_server;
     server_name _;
     root /var/www/html/rutorrent;
-    include /etc/nginx/conf.d/php;
     index index.html;
 
     location /RPC2 {
