@@ -1,0 +1,13 @@
+server {
+    listen 443 ssl; 
+    ${SSLCERT}
+    server_name ${NOMDHOTE};
+    root /var/www/html/rutorrent;
+    include /etc/nginx/conf.d/php;
+    index index.html;
+
+    location /RPC2 {
+        include scgi_params;
+        scgi_pass localhost:5000;
+    }
+}
