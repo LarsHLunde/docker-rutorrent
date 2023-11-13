@@ -25,5 +25,7 @@ fi
 cp -f /config/default /etc/nginx/sites-enabled/.
 cp -f /config/rtorrent.rc ~/.rtorrent.rc
 
+php-fpm8.2
 nginx
+
 read  -n 1 -p "Input Selection:" mainmenuinput
