@@ -21,7 +21,6 @@ if test -f "$FILE"; then
 		php-opcache  \
 		php-zip \
 		mediainfo \
-  		xmlrpc-c \
     		sox \
       		geoip-database
 
