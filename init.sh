@@ -7,7 +7,7 @@ if test -f "$FILE"; then
     apt-get update
 	apt-get install -y dialog \
  		screen \
- 		curl \
+ 		tmux \
 		nginx \
 		zip \
 		rtorrent \
@@ -58,7 +58,7 @@ export HOME=/root
 
 php-fpm8.2
 nginx
-screen -S rtorrent -fa -d -m rtorrent
+tmux new-session -d -s rtorrent 'rtorrent'
 
 i=3
 
@@ -68,6 +68,6 @@ do
   i=0
   i=$(($i+$(ps -ef | grep "php-fpm: master process" | grep -v grep | wc -l)))
   i=$(($i+$(ps -ef | grep "nginx: master process" | grep -v grep | wc -l)))
-  i=$(($i+$(ps -ef | grep "SCREEN rtorrent" | grep -v grep | wc -l)))
+  i=$(($i+$(ps -ef | grep "tmux new-session -d -s rtorrent" | grep -v grep | wc -l)))
 done
 
