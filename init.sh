@@ -55,4 +55,14 @@ cp -f /config/rtorrent.rc ~/.rtorrent.rc
 php-fpm8.2
 nginx
 
-read  -n 1 -p "Input Selection:" mainmenuinput
+i=3
+
+until [ $i -lt 3 ]
+do
+  sleep 60
+  i=0
+  i=$(($i+$(ps -ef | grep "php-fpm: master process" | grep -v grep | wc -l)))
+  i=$(($i+$(ps -ef | grep "nginx: master process" | grep -v grep | wc -l)))
+  i=$(($i+$(ps -ef | grep "SCREEN rtorrent" | grep -v grep | wc -l)))
+done
+
