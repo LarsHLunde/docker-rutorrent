@@ -36,6 +36,7 @@ if test -f "$FILE"; then
 
     mv /install/config.php /config/.
     mv /install/rtorrent.rc /config/.
+    mv /install/plugins.ini /config/.
     
     echo "Docker RuTorrent has been installed"
     echo "Start the docker the normal way and it will start normally"
@@ -46,6 +47,7 @@ chmod 777 -R /config
 chmod 777 -R /downloads
 
 cp -f /config/config.php /var/www/html/rutorrent/conf/config.php
+cp -f /config/plugins.ini /var/www/html/rutorrent/conf/plugins.ini
 cp -f /config/default /etc/nginx/sites-enabled/.
 cp -f /config/rtorrent.rc ~/.rtorrent.rc
 
