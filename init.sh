@@ -54,11 +54,11 @@ cp -f /config/default /etc/nginx/sites-enabled/.
 cp -f /config/rtorrent.rc ~/.rtorrent.rc
 rm -f /config/session/rtorrent.lock
 
+export HOME=/root
+
 php-fpm8.2
 nginx
 screen -S rtorrent -fa -d -m rtorrent
-
-sleep 3
 
 i=3
 
