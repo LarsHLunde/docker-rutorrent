@@ -60,7 +60,7 @@ i=3
 
 until [ $i -lt 3 ]
 do
-  sleep 60
+  sleep 10
   i=0
   i=$(($i+$(ps -ef | grep "php-fpm: master process" | grep -v grep | wc -l)))
   i=$(($i+$(ps -ef | grep "nginx: master process" | grep -v grep | wc -l)))
