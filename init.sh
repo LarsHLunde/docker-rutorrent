@@ -23,7 +23,8 @@ if test -f "$FILE"; then
 		php-zip \
 		mediainfo \
     		sox \
-      		geoip-database
+      		geoip-database \
+		unrar-free
 
     mkdir -p /config/session
     mkdir -p /config/watch
@@ -33,6 +34,7 @@ if test -f "$FILE"; then
     unzip /install/ruTorrent*.zip -d /var/www/html > /dev/null
     mv /var/www/html/ruTorrent* /var/www/html/rutorrent
 
+    mv /install/config.php /config/.
     mv /install/rtorrent.rc /config/.
     
     echo "Docker RuTorrent has been installed"
@@ -40,6 +42,7 @@ if test -f "$FILE"; then
     exit 0
 fi
 
+cp -f /config/config.php /var/www/html/rutorrent/conf/config.php
 cp -f /config/default /etc/nginx/sites-enabled/.
 cp -f /config/rtorrent.rc ~/.rtorrent.rc
 
