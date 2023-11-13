@@ -28,3 +28,7 @@ So to run it through Nginx, preferably with signed TLS, here's the config:
                 auth_basic_user_file /etc/nginx/.htpasswd;
         }
 ```
+and how to make a htpasswd file:  
+```  
+htpasswd -c /etc/nginx/.htpasswd pyro
+```
