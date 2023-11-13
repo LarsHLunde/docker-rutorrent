@@ -5,6 +5,10 @@ server {
     root /var/www/html/rutorrent;
     index index.html;
 
+    location ~ \.php$ {
+        fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+    }
+
     location /RPC2 {
         include scgi_params;
         scgi_pass localhost:5000;
