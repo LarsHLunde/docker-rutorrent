@@ -7,6 +7,12 @@ server {
 
     location ~ \.php$ {
         fastcgi_pass unix:/run/php/php8.2-fpm.sock;
+        try_files $uri = 404;
+        fastcgi_split_path_info ^(.+\.php)(/.+)$;
+        include        fastcgi_params;
+        fastcgi_index  index.php;
+        fastcgi_param SCRIPT_FILENAME $request_filename;
+        fastcgi_read_timeout 300;
     }
 
     location /RPC2 {
