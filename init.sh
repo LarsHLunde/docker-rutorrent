@@ -57,6 +57,8 @@ php-fpm8.2
 nginx
 screen -S rtorrent -fa -d -m rtorrent
 
+sleep 3
+
 i=3
 
 until [ $i -lt 3 ]
