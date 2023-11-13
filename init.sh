@@ -20,7 +20,10 @@ if test -f "$FILE"; then
 		php-mbstring  \
 		php-opcache  \
 		php-zip \
-		mediainfo
+		mediainfo \
+  		xmlrpc-c \
+    		sox \
+      		geoip-database
 
     mkdir -p /config/session
     mkdir -p /config/watch
