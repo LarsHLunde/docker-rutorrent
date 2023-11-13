@@ -9,7 +9,7 @@ docker build -t rutorrent .
 docker run -t \
   -v /root/rutorrent-config:/config \
   -v /downloads:/downloads \
-  -p 80:80 \
+  -p 8080:80 \
   --name rutorrent \
   --restart unless-stopped \
   rutorrent
