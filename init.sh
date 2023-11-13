@@ -54,6 +54,7 @@ cp -f /config/rtorrent.rc ~/.rtorrent.rc
 
 php-fpm8.2
 nginx
+screen -S rtorrent -fa -d -m rtorrent
 
 i=3
 
