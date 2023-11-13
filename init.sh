@@ -42,6 +42,9 @@ if test -f "$FILE"; then
     exit 0
 fi
 
+chmod 777 -R /config
+chmod 777 -R /downloads
+
 cp -f /config/config.php /var/www/html/rutorrent/conf/config.php
 cp -f /config/default /etc/nginx/sites-enabled/.
 cp -f /config/rtorrent.rc ~/.rtorrent.rc
