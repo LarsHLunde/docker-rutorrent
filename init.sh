@@ -45,6 +45,7 @@ fi
 
 chmod 777 -R /config
 chmod 777 -R /downloads
+chown www-data:www-data -R /var/www/html/rutorrent
 
 cp -f /config/config.php /var/www/html/rutorrent/conf/config.php
 cp -f /config/plugins.ini /var/www/html/rutorrent/conf/plugins.ini
