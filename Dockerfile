@@ -9,6 +9,7 @@ ADD ruTorrent-*.zip /install/
 ADD rtorrent.rc /install/
 ADD default /install/
 ADD config.php /install/
+ADD plugins.ini /install/
 ADD init.sh /script/
 EXPOSE 80/tcp
 ENTRYPOINT ["/bin/bash", "/script/init.sh"]
