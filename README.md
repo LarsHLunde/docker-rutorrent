@@ -10,6 +10,7 @@ docker run -t \
   -v /root/rutorrent-config:/config \
   -v /downloads:/downloads \
   -p 8080:80 \
+  -p 55555:55555 \
   --name rutorrent \
   --restart unless-stopped \
   rutorrent
