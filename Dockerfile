@@ -12,4 +12,5 @@ ADD config.php /install/
 ADD plugins.ini /install/
 ADD init.sh /script/
 EXPOSE 80/tcp
+EXPOSE 55555/tcp
 ENTRYPOINT ["/bin/bash", "/script/init.sh"]
