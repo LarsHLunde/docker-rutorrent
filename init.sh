@@ -52,6 +52,7 @@ cp -f /config/config.php /var/www/html/rutorrent/conf/config.php
 cp -f /config/plugins.ini /var/www/html/rutorrent/conf/plugins.ini
 cp -f /config/default /etc/nginx/sites-enabled/.
 cp -f /config/rtorrent.rc ~/.rtorrent.rc
+rm -f /config/session/rtorrent.lock
 
 php-fpm8.2
 nginx
