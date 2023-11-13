@@ -5,8 +5,9 @@ if test -f "$FILE"; then
     rm -f /install/firstrun
 
     apt-get update
-	apt-get install -y curl \
- 		dialog \
+	apt-get install -y dialog \
+ 		screen \
+ 		curl \
 		nginx \
 		zip \
 		rtorrent \
