@@ -5,7 +5,22 @@ if test -f "$FILE"; then
     rm -f /install/firstrun
 
     apt-get update
-    apt-get install -y curl php nginx php-fpm zip rtorrent php-json
+	apt-get install -y curl \
+		nginx \
+		zip \
+		rtorrent \
+		php \
+		php-fpm \
+		php-cli  \
+		php-dev  \
+		php-xml  \
+		php-curl  \
+		php-xmlrpc  \
+		php-json  \
+		php-mbstring  \
+		php-opcache  \
+		php-zip \
+		mediainfo
 
     mkdir -p /config/session
     mkdir -p /config/watch
