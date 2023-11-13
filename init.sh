@@ -6,6 +6,7 @@ if test -f "$FILE"; then
 
     apt-get update
 	apt-get install -y curl \
+ 		dialog \
 		nginx \
 		zip \
 		rtorrent \
