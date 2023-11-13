@@ -3,6 +3,12 @@
 FILE=/install/firstrun
 if test -f "$FILE"; then
     rm -f /install/firstrun
+
+    apt-get update
+    apt-get install -y curl php nginx php-fpm zip rtorrent php-json
+
+    mkdir -p /config/session
+    mkdir -p /config/watch
     
     mv /install/default /config/.
 
