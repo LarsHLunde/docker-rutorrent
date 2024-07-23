@@ -12,12 +12,13 @@ if test -f "$FILE"; then
     unzip /install/ruTorrent*.zip -d /var/www/html > /dev/null
     mv /var/www/html/ruTorrent* /var/www/html/rutorrent
 
+    sed -i 's/memory_limit = 128M/memory_limit = 256M/' /etc/php/8.2/fpm/php.ini
     mv /install/config.php /config/.
     mv /install/rtorrent.rc /config/.
     mv /install/plugins.ini /config/.
     
     echo "Docker RuTorrent has been installed"
-    echo "Start the docker the normal way and it will start normally"
+    echo "The RuTorrent instance should already be running"
     exit 0
 fi
 
